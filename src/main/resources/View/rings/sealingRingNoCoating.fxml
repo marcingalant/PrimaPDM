@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.sealingRingNoCoatingController">
+   <children>
+      <ToolBar maxHeight="-Infinity" minHeight="-Infinity" prefHeight="46.0" prefWidth="800.0">
+         <items>
+            <Label text="Pierścień uszczelniający bez powłoki">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+         </items>
+      </ToolBar>
+      <TabPane maxHeight="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Obszar A i B">
+            <content>
+              <AnchorPane maxHeight="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="800.0">
+                     <children>
+                        <Label layoutX="310.0" layoutY="51.0" text="Średnica" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="50.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="DiameterNom" layoutX="364.0" layoutY="48.0" prefWidth="80.0" promptText="100" AnchorPane.leftAnchor="360.0" />
+                        <Label layoutX="372.0" layoutY="31.0" text="Wartość nom." AnchorPane.leftAnchor="370.0" />
+                        <Label layoutX="482.0" layoutY="31.0" text="Typ toletancji" AnchorPane.leftAnchor="490.0" />
+                        <ComboBox fx:id="DiameterTol" layoutX="482.0" layoutY="48.0" prefWidth="100.0" promptText="+-0,006" AnchorPane.leftAnchor="480.0" />
+                        <Label layoutX="300.0" layoutY="100.0" text="Grubość prom." AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="110.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="thicknessNom" layoutX="364.0" layoutY="108.0" prefHeight="25.0" prefWidth="80.0" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="108.0" />
+                        <Label layoutX="369.0" layoutY="91.0" text="Wartość nom." AnchorPane.topAnchor="90.0" />
+                        <TextField fx:id="thicknessTolMin" layoutX="480.0" layoutY="108.0" prefHeight="25.0" prefWidth="80.0" AnchorPane.leftAnchor="480.0" />
+                        <Label layoutX="484.0" layoutY="91.0" text="tolerancja min." AnchorPane.topAnchor="90.0" />
+                        <TextField fx:id="thicknessTolMax" layoutX="613.0" layoutY="108.0" prefHeight="25.0" prefWidth="80.0" AnchorPane.leftAnchor="600.0" />
+                        <Label layoutX="605.0" layoutY="91.0" text="tolerancja max." AnchorPane.topAnchor="90.0" />
+                        <Label layoutX="446.0" layoutY="112.0" text="mm" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="110.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="568.0" layoutY="111.0" text="mm" AnchorPane.leftAnchor="567.0" AnchorPane.topAnchor="110.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="685.0" layoutY="114.0" text="mm" AnchorPane.leftAnchor="687.0" AnchorPane.topAnchor="110.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="250.0" layoutY="158.0" text="Wysokość" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="170.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="heightNom" layoutX="358.0" layoutY="168.0" prefWidth="80.0" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="168.0" />
+                        <Label layoutX="447.0" layoutY="170.0" text="mm" AnchorPane.topAnchor="170.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="heightMin" layoutX="480.0" layoutY="169.0" prefHeight="25.0" prefWidth="80.0" AnchorPane.topAnchor="168.0" />
+                        <Label layoutX="568.0" layoutY="171.0" text="mm" AnchorPane.topAnchor="170.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="heightMax" layoutX="600.0" layoutY="168.0" prefHeight="25.0" prefWidth="80.0" />
+                        <Label layoutX="687.0" layoutY="171.0" text="mm">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="369.0" layoutY="151.0" text="Wartość nom." />
+                        <Label layoutX="487.0" layoutY="151.0" text="tolerancja min." />
+                        <Label layoutX="605.0" layoutY="151.0" text="tolerancja max." />
+                        <Label layoutX="250.0" layoutY="237.0" text="Szczelina zamka" AnchorPane.topAnchor="230.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="gapMin" layoutX="360.0" layoutY="228.0" prefWidth="80.0" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="228.0" />
+                        <Label layoutX="448.0" layoutY="231.0" text="mm">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="gapMax" layoutX="480.0" layoutY="228.0" prefHeight="25.0" prefWidth="80.0" />
+                        <Label layoutX="363.0" layoutY="211.0" text="tolerancja min." AnchorPane.topAnchor="211.0" />
+                        <Label layoutX="484.0" layoutY="211.0" text="tolerancja max." AnchorPane.topAnchor="211.0" />
+                        <Label layoutX="250.0" layoutY="299.0" text="Bicie" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="290.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="363.0" layoutY="271.0" text="tolerancja" />
+                        <Label layoutX="568.0" layoutY="230.0" text="mm">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="448.0" layoutY="291.0" text="mm">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="236.0" layoutY="364.0" text="Chropowatość bieżni" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="350.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="raOut" layoutX="415.0" layoutY="348.0" prefWidth="60.0" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="348.0" />
+                        <Label layoutX="508.0" layoutY="350.0" text="mm" AnchorPane.leftAnchor="530.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="236.0" layoutY="404.0" text="Chropowatość pow. wewn." AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="410.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="434.0" layoutY="353.0" text="Ra " AnchorPane.leftAnchor="435.0" AnchorPane.topAnchor="350.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="431.0" layoutY="410.0" text="Ra " AnchorPane.leftAnchor="435.0" AnchorPane.topAnchor="410.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="raIn" layoutX="460.0" layoutY="408.0" prefWidth="60.0" />
+                        <Label layoutX="236.0" layoutY="459.0" text="Chropowatość pł. górnej" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="470.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="435.0" layoutY="470.0" text="Ra " AnchorPane.leftAnchor="435.0" AnchorPane.topAnchor="470.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="raUp" layoutX="460.0" layoutY="468.0" prefWidth="60.0" />
+                        <Label layoutX="251.0" layoutY="519.0" text="Chropowatość pł. dolnej" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="530.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="425.0" layoutY="530.0" text="Ra " AnchorPane.leftAnchor="435.0" AnchorPane.topAnchor="530.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="raDown" layoutX="460.0" layoutY="528.0" prefWidth="60.0" AnchorPane.topAnchor="528.0" />
+                        <Label layoutX="548.0" layoutY="411.0" text="mm" AnchorPane.leftAnchor="530.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="548.0" layoutY="471.0" text="mm" AnchorPane.leftAnchor="530.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="548.0" layoutY="531.0" text="mm" AnchorPane.leftAnchor="530.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="236.0" layoutY="593.0" text="Chropowatość ogólna" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="590.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="431.0" layoutY="590.0" text="Ra " AnchorPane.leftAnchor="435.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="raGeneral" layoutX="460.0" layoutY="588.0" prefWidth="60.0" AnchorPane.topAnchor="588.0" />
+                        <Label layoutX="548.0" layoutY="590.0" text="mm" AnchorPane.leftAnchor="530.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="circularity" layoutX="349.0" layoutY="290.0" prefWidth="80.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Obszar C - Przód">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="simpleRing" layoutX="78.0" layoutY="54.0" mnemonicParsing="false" selected="true" text="PROSTY RA-01" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="55.0">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="out" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="simpleRingChamfers" layoutX="516.0" layoutY="54.0" mnemonicParsing="false" text="PROSTY Z FAZKAMI RA-02" toggleGroup="$out" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="55.0" />
+                        <GridPane layoutX="502.0" layoutY="99.0" prefHeight="162.0" prefWidth="200.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="100.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="131.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="69.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="fazka wart nom." />
+                              <Label text="tol.+-" GridPane.rowIndex="1" />
+                              <Label text="kąt" GridPane.rowIndex="2" />
+                              <Label text="próg max." GridPane.rowIndex="3" />
+                              <TextField fx:id="SimpleRingChamferNom" GridPane.columnIndex="1" />
+                              <TextField fx:id="SimpleRingChamferTol" prefHeight="25.0" prefWidth="85.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="SimpleRingChamferAlfa" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="SimpleRingChamferGoetze" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <RadioButton fx:id="taperFacedRing" layoutX="150.0" layoutY="291.0" mnemonicParsing="false" text="STOŻEK SA" toggleGroup="$out" />
+                        <RadioButton fx:id="taperFacedRingLapped" layoutX="500.0" layoutY="291.0" mnemonicParsing="false" text="STOŻEK DOCIERANY DA" toggleGroup="$out" />
+                        <GridPane layoutX="152.0" layoutY="331.0" prefHeight="97.0" prefWidth="203.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="70.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="43.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="24.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="39.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="32.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="kąt alfa" />
+                              <TextField fx:id="taperFacedRingAlfaNom" GridPane.columnIndex="1" />
+                              <Label text="tol kąta +-" GridPane.rowIndex="1" />
+                              <TextField fx:id="taperFacedRingAlfaTol" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="st. " GridPane.columnIndex="2" />
+                              <TextField fx:id="taperFacedRingAlfaMinNom" GridPane.columnIndex="3" />
+                              <Label text="min." GridPane.columnIndex="4" />
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="481.0" layoutY="324.0" prefHeight="126.0" prefWidth="257.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="53.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="35.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="46.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="38.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="kąt alfa" />
+                              <Label text="tol. kąta +-" GridPane.rowIndex="1" />
+                              <Label text="łysinka min" GridPane.rowIndex="2" />
+                              <Label text="łysinka max" GridPane.rowIndex="3" />
+                              <TextField fx:id="taperFacedRingLappedAlfaNom" GridPane.columnIndex="1" />
+                              <TextField fx:id="taperFacedRingLappedAlfaTol" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="taperFacedRingLappedLappingMin" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="taperFacedRingLappedLappingMax" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="st." GridPane.columnIndex="2" />
+                              <TextField fx:id="taperFacedRingLappedAlfaMinNom" prefHeight="25.0" prefWidth="45.0" GridPane.columnIndex="3" />
+                              <Label text="min." GridPane.columnIndex="4" />
+                           </children>
+                        </GridPane>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="41.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/RA1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="370.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/RA2.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/RA3.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="350.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/RA4.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Obszar C - środek">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="Straight" layoutX="31.0" layoutY="42.0" mnemonicParsing="false" selected="true" text="PROSTA R" AnchorPane.topAnchor="100.0">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="surface" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="halfKeystone" layoutX="144.0" layoutY="42.0" mnemonicParsing="false" text="TRAPEZ JEDNOSTRONNY J" toggleGroup="$surface" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="100.0" />
+                        <GridPane layoutX="197.0" layoutY="218.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="140.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="155.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="45.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="kąt trapezu" />
+                              <Label text="tol. kąta +-" GridPane.rowIndex="1" />
+                              <Label text="wysokość trapezu nom." GridPane.rowIndex="2" />
+                              <Label text="wys. tr. tol. min" GridPane.rowIndex="3" />
+                              <Label text="wys. tr. tol. max" GridPane.rowIndex="4" />
+                              <Label text="wysokość pomiaru trapezu" GridPane.rowIndex="5" />
+                              <Label text="łysinka pł. czołowej min" GridPane.rowIndex="6" />
+                              <Label text="łysinka pł. czołowej max." GridPane.rowIndex="7" />
+                              <TextField fx:id="hakfKeystoneAlfaNom" GridPane.columnIndex="1" />
+                              <TextField fx:id="halfKeystoneAlfaTol" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="halfKeystoneHeightNom" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="halfKeystoneHeightTolMin" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="halfKeystoneHeightTolMax" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="halfKeystoneMeasureDistance" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="halfKeystoneFlatSurfaceMin" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField fx:id="halfKeystoneFlatSurfaceMax" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                        <GridPane AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="140.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="155.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="45.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="kąt trapezu" />
+                              <Label text="tol. kąta +-" GridPane.rowIndex="1" />
+                              <Label text="wysokość trapezu nom." GridPane.rowIndex="2" />
+                              <Label text="wys. tr. tol. min" GridPane.rowIndex="3" />
+                              <Label text="wys. tr. tol. max" GridPane.rowIndex="4" />
+                              <Label text="wysokość pomiaru trapezu" GridPane.rowIndex="5" />
+                              <Label text="łysinka pł. czołowej min" GridPane.rowIndex="6" />
+                              <Label text="łysinka pł. czołowej max." GridPane.rowIndex="7" />
+                              <TextField fx:id="keystoneAlfaNom" GridPane.columnIndex="1" />
+                              <TextField fx:id="keystoneAlfaTol" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="keystoneHeightNom" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="keystoneHeightTolMin" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="keystoneHeightTolMax" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="keystoneMeasurementDistance" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="keystoneHalfSurfaceMin" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField fx:id="keystonehalfSurfaceMax" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                        <RadioButton fx:id="keystone" layoutX="450.0" layoutY="42.0" mnemonicParsing="false" text="TRAPEZ DWUSTRONNY T" toggleGroup="$surface" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="100.0" />
+                        <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/SimpleRIngNoCoating.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="182.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/halfKeystone.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="500.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Keystone.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Obszar C - tył">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="15.0" layoutY="14.0" prefHeight="585.0" prefWidth="390.0" text="Płaszczyzna górna" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                          <content>
+                            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="388.0">
+                                 <children>
+                                    <GridPane gridLinesVisible="true" layoutX="36.6" layoutY="39.6" prefHeight="588.0" prefWidth="388.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="65.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="86.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="34.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="200.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="29.999998092651367" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="134.0" minHeight="0.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="280.0" minHeight="3.0" prefHeight="147.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="312.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <RadioButton fx:id="upNone" mnemonicParsing="false" selected="true" text="brak" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="rearUp" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="upSmallChamfer" mnemonicParsing="false" text="faza mała" toggleGroup="$rearUp" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </RadioButton>
+                                          <RadioButton fx:id="upBigChamfer" mnemonicParsing="false" text="faza duża" toggleGroup="$rearUp" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </RadioButton>
+                                          <RadioButton fx:id="upBevel" mnemonicParsing="false" text="zgarniacz" toggleGroup="$rearUp" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </RadioButton>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                             <children>
+                                                <FlowPane prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <AnchorPane>
+                                                         <children>
+                                                            <Label text="wart nom." AnchorPane.leftAnchor="5.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <TextField fx:id="upSmallChamferNom" prefHeight="25.0" prefWidth="40.0">
+                                                         <FlowPane.margin>
+                                                            <Insets left="10.0" />
+                                                         </FlowPane.margin>
+                                                      </TextField>
+                                                      <Label text="tol +-">
+                                                         <FlowPane.margin>
+                                                            <Insets left="10.0" />
+                                                         </FlowPane.margin>
+                                                      </Label>
+                                                      <TextField fx:id="upSmallChamferTil" prefHeight="25.0" prefWidth="40.0" />
+                                                      <FlowPane prefHeight="32.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label text="kąt">
+                                                               <FlowPane.margin>
+                                                                  <Insets left="5.0" />
+                                                               </FlowPane.margin>
+                                                            </Label>
+                                                            <TextField fx:id="upSmallChamferAlfa" prefHeight="25.0" prefWidth="40.0">
+                                                               <FlowPane.margin>
+                                                                  <Insets left="10.0" />
+                                                               </FlowPane.margin>
+                                                            </TextField>
+                                                            <Label text="próg max. ">
+                                                               <FlowPane.margin>
+                                                                  <Insets left="10.0" />
+                                                               </FlowPane.margin>
+                                                            </Label>
+                                                            <TextField fx:id="upSmallChamferGoetze" prefHeight="25.0" prefWidth="40.0">
+                                                               <FlowPane.margin>
+                                                                  <Insets left="10.0" />
+                                                               </FlowPane.margin>
+                                                            </TextField>
+                                                         </children>
+                                                         <FlowPane.margin>
+                                                            <Insets top="10.0" />
+                                                         </FlowPane.margin>
+                                                      </FlowPane>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </FlowPane>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets top="10.0" />
+                                             </GridPane.margin>
+                                          </VBox>
+                                          <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label text="półka g wart nom.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upChamferFlatNom" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="10.0" left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. min.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upChamferFlatTolMin" prefHeight="25.0" prefWidth="40.0">
+                                                   <padding>
+                                                      <Insets bottom="10.0" />
+                                                   </padding>
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. max. ">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upChamferFlatTolMax" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="3.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="kąt fazy ">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upChamferAlfaNom" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. +-">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upChamferAlfaTol" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="próg fazy max.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upChamferGoetze" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                             </children>
+                                          </FlowPane>
+                                          <FlowPane prefHeight="200.0" prefWidth="196.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                             <children>
+                                                <Label text="półka g wart. nom.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upBevelFlatNom" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. min. ">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upBevelFlatTolMin" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. max.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upBevelFlatTolMax" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="kąt alfa min.">
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                   <FlowPane.margin>
+                                                      <Insets top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upBevelAlfaMin" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="8.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="   " />
+                                                <Label text="kąt alfa max. ">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upBevelAlfaMax" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="4.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="   " />
+                                                <Label text="kąt beta min.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upBevelBetaMin" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="   " />
+                                                <Label text="kąt beta max. ">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upBevelBetaMax" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="            " />
+                                                <Label text="promień">
+                                                   <padding>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </padding>
+                                                   <FlowPane.margin>
+                                                      <Insets top="10.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upRadius" prefHeight="25.0" prefWidth="40.0">
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                   <FlowPane.margin>
+                                                      <Insets left="24.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="wys. wart nom." />
+                                                <TextField fx:id="upBevelNom" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets right="40.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. min">
+                                                   <FlowPane.margin>
+                                                      <Insets />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="upBevelTolmin" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets top="5.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. max." />
+                                                <TextField fx:id="UpBevelTolMax" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets top="5.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                             </children>
+                                          </FlowPane>
+                                          <Label text="B" GridPane.columnIndex="2" />
+                                          <Label text="F" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <Label text="F/2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                          <Label text="Z" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                          <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+                                             <image>
+                                                <Image url="@../../Images/uB.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                             <image>
+                                                <Image url="@../../Images/uF.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                             <image>
+                                                <Image url="@../../Images/u2.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                             <image>
+                                                <Image url="@../../Images/uZ.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="400.0" layoutY="5.0" prefHeight="619.0" prefWidth="390.0" text="Płaszczyzna dolna">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="386.0">
+                                 <children>
+                                    <GridPane gridLinesVisible="true" layoutX="18.6" layoutY="19.6" prefHeight="601.0" prefWidth="369.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="65.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="86.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="34.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="200.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="30.999998092651367" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="134.0" minHeight="0.0" prefHeight="74.00000762939453" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="280.0" minHeight="3.0" prefHeight="149.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="319.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <RadioButton fx:id="downNone" mnemonicParsing="false" selected="true" text="brak" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="rearDown" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="downSmallChamfer" mnemonicParsing="false" text="faza mała" toggleGroup="$rearDown" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </RadioButton>
+                                          <RadioButton fx:id="downBigChamfer" mnemonicParsing="false" text="faza duża" toggleGroup="$rearDown" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </RadioButton>
+                                          <RadioButton fx:id="downBevel" mnemonicParsing="false" text="zgarniacz" toggleGroup="$rearDown" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                          </RadioButton>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                             <children>
+                                                <FlowPane prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <AnchorPane>
+                                                         <children>
+                                                            <Label text="wart nom." AnchorPane.leftAnchor="5.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <TextField fx:id="downSmallChamferNom" prefHeight="25.0" prefWidth="40.0">
+                                                         <FlowPane.margin>
+                                                            <Insets left="10.0" />
+                                                         </FlowPane.margin>
+                                                      </TextField>
+                                                      <Label text="tol +-">
+                                                         <FlowPane.margin>
+                                                            <Insets left="10.0" />
+                                                         </FlowPane.margin>
+                                                      </Label>
+                                                      <TextField fx:id="downSmallChamferTol" prefHeight="25.0" prefWidth="40.0" />
+                                                      <FlowPane prefHeight="32.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label text="kąt">
+                                                               <FlowPane.margin>
+                                                                  <Insets left="5.0" />
+                                                               </FlowPane.margin>
+                                                            </Label>
+                                                            <TextField fx:id="downSmallChamferAlfa" prefHeight="25.0" prefWidth="40.0">
+                                                               <FlowPane.margin>
+                                                                  <Insets left="10.0" />
+                                                               </FlowPane.margin>
+                                                            </TextField>
+                                                            <Label text="próg max. ">
+                                                               <FlowPane.margin>
+                                                                  <Insets left="10.0" />
+                                                               </FlowPane.margin>
+                                                            </Label>
+                                                            <TextField fx:id="downSmallChamferGoetze" prefHeight="25.0" prefWidth="40.0">
+                                                               <FlowPane.margin>
+                                                                  <Insets left="10.0" />
+                                                               </FlowPane.margin>
+                                                            </TextField>
+                                                         </children>
+                                                         <FlowPane.margin>
+                                                            <Insets top="10.0" />
+                                                         </FlowPane.margin>
+                                                      </FlowPane>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </FlowPane>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets top="10.0" />
+                                             </GridPane.margin>
+                                          </VBox>
+                                          <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label text="półka g wart nom.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downChamferFlatNom" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="10.0" left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. min.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downChamferFlatTolMin" prefHeight="25.0" prefWidth="40.0">
+                                                   <padding>
+                                                      <Insets bottom="10.0" />
+                                                   </padding>
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. max. ">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downChamferFlatTolMax" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="3.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="kąt fazy ">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downChamferAlfa" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. +-">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downChamferAlfaTol" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="próg fazy max.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downChamferGoetze" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                             </children>
+                                          </FlowPane>
+                                          <FlowPane prefHeight="200.0" prefWidth="196.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                             <children>
+                                                <Label text="półka g wart. nom.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downBevelFlatNom" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. min. ">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downBevelFlatTolMin" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. max.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downBevelFlatTolMax" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="kąt alfa min.">
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                   <FlowPane.margin>
+                                                      <Insets top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downBevelAlfaMin" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="8.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="   " />
+                                                <Label text="kąt alfa max. ">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downBevelAlfaMax" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="4.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="   " />
+                                                <Label text="kąt beta min.">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downBevelBetaMin" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="   " />
+                                                <Label text="kąt beta max. ">
+                                                   <FlowPane.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downBevelBetaMax" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="            " />
+                                                <Label text="promień">
+                                                   <padding>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </padding>
+                                                   <FlowPane.margin>
+                                                      <Insets top="10.0" />
+                                                   </FlowPane.margin>
+                                                </Label>
+                                                <TextField fx:id="downBevelRadius" prefHeight="25.0" prefWidth="40.0">
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                   <FlowPane.margin>
+                                                      <Insets left="24.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="wys. wart. nom" />
+                                                <TextField fx:id="downBevelNom" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets right="35.0" top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. min." />
+                                                <TextField fx:id="downBevelTolMin" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                                <Label text="tol. max." />
+                                                <TextField fx:id="downBevelTolMax" prefHeight="25.0" prefWidth="40.0">
+                                                   <FlowPane.margin>
+                                                      <Insets top="10.0" />
+                                                   </FlowPane.margin>
+                                                </TextField>
+                                             </children>
+                                          </FlowPane>
+                                          <Label text="B" GridPane.columnIndex="2" />
+                                          <Label text="F" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <Label text="F/2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                          <Label text="Z" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                          <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+                                             <image>
+                                                <Image url="@../../Images/dB.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                             <image>
+                                                <Image url="@../../Images/dF.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                             <image>
+                                                <Image url="@../../Images/d2.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                             <image>
+                                                <Image url="@../../Images/dZ.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Wyrób gotowy">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="269.0" layoutY="40.0" prefHeight="97.0" prefWidth="485.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="141.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="306.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Znak po lewej stronie zamka" />
+                              <Label text="Znak po prawej stronie zamka" GridPane.rowIndex="1" />
+                              <TextField GridPane.columnIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Indeks rolki/kompletu" GridPane.rowIndex="2" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Ramka">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="22.0" layoutY="152.0" prefHeight="156.0" prefWidth="690.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="180.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="176.0" minWidth="10.0" prefWidth="129.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="204.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="88.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="269.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="98.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="98.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Opracował">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="designedBy" GridPane.columnIndex="1" />
+                              <Label text="Data" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
+                                 <children>
+                                    <TextField fx:id="designedByDateDay" prefHeight="25.0" prefWidth="40.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="/">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="designedByDateMonth" prefHeight="25.0" prefWidth="40.0">
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="/">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="designedByDateYear" prefHeight="25.0" prefWidth="60.0">
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="DD/MM/RRRR">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="Sprawdził" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Zatwierdził" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="chceckedBy" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="approvedBy" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Data" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Data" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="checkedByDateDay" prefHeight="25.0" prefWidth="40.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="/">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="checkedByDateMonth" prefHeight="25.0" prefWidth="40.0">
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="/">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="checkedByDateYear" prefHeight="25.0" prefWidth="59.0">
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="DD/MM/RRRR">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <children>
+                                    <TextField fx:id="approvedByDateDay" prefHeight="25.0" prefWidth="40.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="/">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="approvedByDateMonth" prefHeight="25.0" prefWidth="40.0">
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="/">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="approvedByDateYear" prefHeight="25.0" prefWidth="60.0">
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="DD/MM/RRRR">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="ETO" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Nr rysunku" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="eto" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="etoVersion" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="14.0" layoutY="13.0" prefHeight="139.0" prefWidth="722.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="586.0" minWidth="10.0" prefWidth="576.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="96.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextArea fx:id="PPcode" maxHeight="42.0" minHeight="20.0" prefHeight="42.0" prefWidth="586.0" GridPane.rowIndex="1" />
+                              <TextField fx:id="PPname" prefHeight="33.0" prefWidth="586.0" GridPane.rowIndex="3" />
+                              <Label text="Kod półproduktu" />
+                              <Label text="Nazwa pierścienia" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Generuj kod" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Generuj nazwę" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Ogólne">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <FlowPane layoutX="56.0" layoutY="23.0" prefHeight="42.0" prefWidth="265.0">
+                           <children>
+                              <Label text="Siła styczna : min " />
+                              <TextField fx:id="fMin" prefHeight="25.0" prefWidth="41.0" />
+                              <Label text="   max  " />
+                              <TextField fx:id="fMax" prefHeight="25.0" prefWidth="51.0" />
+                              <Label text=" N" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane layoutX="56.0" layoutY="65.0" prefHeight="40.0" prefWidth="259.0">
+                           <children>
+                              <Label text="Owalizacja: min    " />
+                              <TextField fx:id="ovalityMin" prefHeight="25.0" prefWidth="41.0" />
+                              <Label text="   max   " />
+                              <TextField fx:id="ovalityMax" prefHeight="25.0" prefWidth="51.0" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane layoutX="56.0" layoutY="105.0" prefHeight="46.0" prefWidth="242.0">
+                           <children>
+                              <Label text="Pokrycie:        " />
+                              <ComboBox fx:id="phosphate" prefHeight="25.0" prefWidth="101.0" promptText="PZN" />
+                           </children>
+                        </FlowPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane prefHeight="0.0" prefWidth="800.0" VBox.vgrow="NEVER">
+         <children>
+            <Button fx:id="backToChooseRing" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToRing" prefHeight="35.0" prefWidth="80.0" text="Wstecz" />
+            <Button fx:id="createDrawing1" layoutX="726.0" layoutY="16.0" mnemonicParsing="false" onAction="#drawRing" prefHeight="35.0" prefWidth="60.0" text="OK" />
+            <Button fx:id="cancel" layoutX="113.0" layoutY="14.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" text="Anuluj" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

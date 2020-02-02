@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.chooseRingController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="126.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="274.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <RadioButton mnemonicParsing="false" selected="true" text="Uszczelniający bez powłoki" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <RadioButton disable="true" mnemonicParsing="false" text="Uszczelniający chromowany" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <RadioButton disable="true" mnemonicParsing="false" text="Uszczelniający molibdenowany/plazmowany" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <RadioButton disable="true" mnemonicParsing="false" text="Noskowy bez powłoki" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <RadioButton disable="true" mnemonicParsing="false" text="Olejowy bez powłoki" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <RadioButton disable="true" mnemonicParsing="false" text="Olejowy chromowany" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <RadioButton disable="true" mnemonicParsing="false" text="Stalowy" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <RadioButton disable="true" mnemonicParsing="false" text="Inny" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Button fx:id="backToChooseProject" mnemonicParsing="false" onAction="#backToChooseProject" text="Wstecz" GridPane.rowIndex="9">
+         <GridPane.margin>
+            <Insets left="15.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="next" mnemonicParsing="false" onAction="#chooseRing" text="Dalej" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+         <GridPane.margin>
+            <Insets right="15.0" />
+         </GridPane.margin>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <image>
+            <Image url="@../../Images/SimpleRIngNoCoating.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <image>
+            <Image url="@../../Images/CrRing.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <image>
+            <Image url="@../../Images/MoRing.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <image>
+            <Image url="@../../Images/MoRing.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+         <image>
+            <Image url="@../../Images/OliRingNoCoating.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+         <image>
+            <Image url="@../../Images/OilRingCr.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+         <image>
+            <Image url="@../../Images/SteelRing.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+         <image>
+            <Image url="@../../Images/Other.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</GridPane>

@@ -1,0 +1,16 @@
+#zoomInNode {
+	-fx-background-image: url("../Images/zoomIn.jpg");
+}
+
+#zoomOutNode {
+	-fx-background-image: url("../Images/zoomOut.jpg");
+}
+
+
+
+/* Przyciski po najechaniu */
+.button:hover,
+.toggle-button:hover,
+.toggle-button:selected {
+	-fx-opacity: 100%;
+}

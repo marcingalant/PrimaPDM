@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.mainPaneController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar fx:id="mainMenu" minHeight="30.0">
+              <menus>
+                <Menu fx:id="menuFile" mnemonicParsing="false" text="Plik">
+                  <items>
+                        <MenuItem fx:id="newProject" mnemonicParsing="false" onAction="#chooseProject" text="Nowy projekt pierścienia" />
+                    <MenuItem fx:id="openProject" mnemonicParsing="false" text="Otwórz projekt pierścienia" />
+                        <Menu fx:id="saveDrawingTo" mnemonicParsing="false" text="Zapisz rysunek">
+                          <items>
+                            <MenuItem fx:id="saveToPDF" mnemonicParsing="false" onAction="#saveDrawingtoPdF" text="Do PDF" />
+                              <MenuItem fx:id="saveToPNG" mnemonicParsing="false" onAction="#saveDrawingToPng" text="Do PNG" />
+                          </items>
+                        </Menu>
+                        <Menu fx:id="saveParametersTo" mnemonicParsing="false" text="Zapisz parametry pierścienia">
+                          <items>
+                            <MenuItem fx:id="saveToExcel" mnemonicParsing="false" onAction="#saveRingToExcel" text="do Excela" />
+                              <MenuItem fx:id="saveToSQL" mnemonicParsing="false" text="do bazy danych SQL" />
+                          </items>
+                        </Menu>
+                        <MenuItem fx:id="printDrawing" mnemonicParsing="false" text="Drukuj" />
+                        <MenuItem fx:id="exportProject" mnemonicParsing="false" text="Eksportuj projekt" />
+                        <MenuItem fx:id="closeApplication" mnemonicParsing="false" text="Zakończ" />
+                  </items>
+                </Menu>
+                <Menu fx:id="menuEdit" mnemonicParsing="false" text="Edycja">
+                  <items>
+                    <MenuItem fx:id="editDrawing" mnemonicParsing="false" text="Edytuj rysunek" />
+                        <MenuItem fx:id="editBOM" mnemonicParsing="false" text="Edytuj strukturę" />
+                        <MenuItem fx:id="editTechnology" mnemonicParsing="false" text="Edytuj technologię" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="menuTechnology" mnemonicParsing="false" text="Technologia">
+                    <items>
+                      <MenuItem fx:id="ringCalculation" mnemonicParsing="false" text="Obliczenia pierścienia" />
+                        <MenuItem fx:id="createBOM" mnemonicParsing="false" text="Twórz strukturę" />
+                        <MenuItem fx:id="createTechnology" mnemonicParsing="false" text="Twórz technologię" />
+                        <MenuItem fx:id="reingProperties" mnemonicParsing="false" text="Właściwości pierścienia" />
+                        <MenuItem fx:id="costCalculation" mnemonicParsing="false" text="Koszt TKW" />
+                    </items>
+                  </Menu>
+                  <Menu fx:id="menuSettings" mnemonicParsing="false" text="Ustawienia">
+                    <items>
+                      <MenuItem fx:id="graphics" mnemonicParsing="false" onAction="#showGraphicsSettings" text="Grafika" />
+                        <MenuItem fx:id="materialData" mnemonicParsing="false" text="Dane materiałowe" />
+                    </items>
+                  </Menu>
+                <Menu fx:id="menuHelp" mnemonicParsing="false" text="Pomoc">
+                  <items>
+                    <MenuItem fx:id="about" mnemonicParsing="false" text="O programie" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar fx:id="mainToolBar" prefHeight="40.0">
+              <items>
+                <Button id="zoomInNode" fx:id="zoomIn" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
+                  <Button id="zoomOutNode" fx:id="zoomOut" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
+                  <ComboBox fx:id="zoomValue" prefHeight="25.0" prefWidth="88.0" promptText="100%" />
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TabPane fx:id="drawingPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="ppPane" text="Rysunek PP">
+               <content>
+                  <ScrollPane fx:id="panelPP" pannable="true" prefHeight="200.0" prefWidth="200.0" />
+               </content>
+          </Tab>
+            <Tab fx:id="wgPane" text="Rysunek WG">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab fx:id="koloPane" text="Rysunek KOŁO">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+          <Tab fx:id="owalPane" text="Rysunek OWAL">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="powlokaPane" text="Rysunek POWŁOKA">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <ToolBar fx:id="bottomToolBar" prefHeight="30.0" BorderPane.alignment="CENTER">
+         <items>
+            <HBox fx:id="hBoxBottomToolBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <ProgressBar fx:id="progressBar1" prefWidth="300.0" progress="0.0" />
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+   </bottom>
+  
+</BorderPane>
